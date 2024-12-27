@@ -97,7 +97,10 @@ if ($data && (time() - strtotime($data["timestamp"])) < $cache_time) {
         $ago[9] = $e->find("span")[19]->plaintext;
         $image[9] = $e->find("div[class='media__image']")[9]->find("img")[0]->src;
         $link[9] = $e->find("h3[class='media__title']")[9]->find("a")[0]->href;
-    $result = [[
+    $result = [
+        "status" => "200",
+        "author" => "$author",
+        "result" => [[
             "title" => "$title[0]",
             "date" => "$date[0]",
             "date_ago" => "$ago[0]",
@@ -157,18 +160,9 @@ if ($data && (time() - strtotime($data["timestamp"])) < $cache_time) {
             "date_ago" => "$ago[9]",
             "image" => "$image[9]",
             "link" => "$link[9]",
-        ]
+        ]],
     ];
-      $ret[] = $result;
-    }
-
-    $result = [
-        "status" => "200",
-        "author" => $author,
-        "result" => $ret,
-    ];
-
-    // Simpan data ke Pantry
+        
     $data_to_save = [
         "timestamp" => date("c"),
         "content" => $result,
