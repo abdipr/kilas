@@ -176,5 +176,5 @@ if ($data && (time() - strtotime($data["timestamp"])) < $cache_time) {
     save_to_pantry($pantry_url, $data_to_save);
 }
 
-echo str_replace("w=210&q=90", "w=700&q=90", str_replace("\\", "", json_encode($data_to_save, JSON_PRETTY_PRINT)));
+echo str_replace("w=210&q=90", "w=700&q=90", str_replace("\\", "", json_encode($result, JSON_PRETTY_PRINT)));
 ?>
