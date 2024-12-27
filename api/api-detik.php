@@ -1,6 +1,6 @@
 <?php
 header("Content-Type: application/json");
-require "../simple_html_dom.php";
+require "/var/task/user/api/simple_html_dom.php";
 
 $pantry_url = "https://getpantry.cloud/apiv1/pantry/fb80de92-bc75-495c-9f7c-52a273ca9061/basket/news-detik";
 
