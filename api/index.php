@@ -1,6 +1,6 @@
 <?php
 // Ambil data dari API
-$api_url = 'http://kilas.glitch.me/api/detik.php';
+$api_url = 'http://kilas.vercel.app/api/detik';
 $response = file_get_contents($api_url);
 $data = json_decode($response, true);
 
