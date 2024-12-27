@@ -165,7 +165,7 @@ if ($data && (time() - strtotime($data["timestamp"])) < $cache_time) {
     $result = [
         "status" => "200",
         "author" => $author,
-        "result" => $ret,
+        "result" => $result,
     ];
 
     // Simpan data ke Pantry
