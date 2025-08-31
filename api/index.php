@@ -18,7 +18,7 @@ if ($data['status'] == 200) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feeds Berita</title>
+    <title>Kilas.com</title>
     <style>
         * {
             margin: 0;
@@ -76,7 +76,7 @@ if ($data['status'] == 200) {
 </head>
 <body>
 
-    <h1>Feeds Berita Terbaru</h1>
+    <h1>Kilas.com</h1>
     <div class="container">
         <?php foreach ($articles as $article): ?>
         <div class="card">
