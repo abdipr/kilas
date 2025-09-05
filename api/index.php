@@ -22,12 +22,56 @@ if ($data && isset($data['status']) && $data['status'] == 200) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kilas.com - Berita Terkini Indonesia</title>
+    <!-- Primary Meta Tags -->
+<title>Kilas.com - Berita Indonesia Hari Ini</title>
+<meta name="title" content="Kilas.com - Berita Indonesia Hari Ini">
+<meta name="description" content="Kilas.com menyajikan berita terkini Indonesia, update setiap hari dari berbagai sumber terpercaya.">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://kilas.com/assets/kilas-icon.png">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kilas.com/">
+<meta property="og:title" content="Kilas.com - Berita Indonesia Terkini">
+<meta property="og:description" content="Kilas.com menyajikan berita terkini Indonesia, update setiap hari dari berbagai sumber terpercaya.">
+<meta property="og:image" content="https://kilas.com/assets/kilas-banner.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://kilas.com/">
+<meta property="twitter:title" content="Kilas.com - Berita Indonesia Terkini">
+<meta property="twitter:description" content="Kilas.com menyajikan berita terkini Indonesia, update setiap hari dari berbagai sumber terpercaya.">
+<meta property="twitter:image" content="https://kilas.com/assets/kilas-banner.png">
+<meta name="keywords" content="berita, berita terkini, berita terbaru, berita hari ini, detik.com, liputan6, inews, inilah.com, kompas.com, cnn indonesia, indonesia, kilas.com">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "Berita Indonesia Terkini",
+  "image": ["https://kilas.com/assets/kilas-banner.png"],
+  "author": {
+    "@type": "Organization",
+    "name": "Kilas.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Kilas.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://kilas.com/assets/kilas-icon.png"
+    }
+  },
+  "datePublished": "2025-09-05"
+}
+</script>
+
     <style>
         :root {
             --primary: #36A0D6;
