@@ -1,17 +1,22 @@
 <?php
-// Ambil data dari API
-$api_url = 'http://kilas.com/api/detik';
-$response = file_get_contents($api_url);
+$api_url = 'https://kilas.com/api/detik'; // ganti ke https
+$response = @file_get_contents($api_url);
+
+if ($response === FALSE) {
+    echo "Gagal mengambil response dari API.";
+    exit();
+}
+
 $data = json_decode($response, true);
 
-// Cek apakah API berhasil mengambil data
-if ($data['status'] == 200) {
+if ($data && isset($data['status']) && $data['status'] == 200) {
     $articles = $data['result'];
 } else {
     echo "Gagal mengambil data dari API.";
     exit();
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
