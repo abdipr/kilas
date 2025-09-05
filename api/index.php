@@ -28,21 +28,21 @@ if ($data && isset($data['status']) && $data['status'] == 200) {
 <meta name="description" content="Kilas.com menyajikan berita terkini Indonesia, update setiap hari dari berbagai sumber terpercaya.">
 
 <!-- Favicon -->
-<link rel="icon" type="image/png" href="https://kilas.com/assets/kilas-icon.png">
+<link rel="icon" type="image/png" href="/kilas-icon.png">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kilas.com/">
 <meta property="og:title" content="Kilas.com - Berita Indonesia Terkini">
 <meta property="og:description" content="Kilas.com menyajikan berita terkini Indonesia, update setiap hari dari berbagai sumber terpercaya.">
-<meta property="og:image" content="https://kilas.com/assets/kilas-banner.png">
+<meta property="og:image" content="/kilas-banner.png">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://kilas.com/">
 <meta property="twitter:title" content="Kilas.com - Berita Indonesia Terkini">
 <meta property="twitter:description" content="Kilas.com menyajikan berita terkini Indonesia, update setiap hari dari berbagai sumber terpercaya.">
-<meta property="twitter:image" content="https://kilas.com/assets/kilas-banner.png">
+<meta property="twitter:image" content="/kilas-banner.png">
 <meta name="keywords" content="berita, berita terkini, berita terbaru, berita hari ini, detik.com, liputan6, inews, inilah.com, kompas.com, cnn indonesia, indonesia, kilas.com">
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -55,7 +55,7 @@ if ($data && isset($data['status']) && $data['status'] == 200) {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
   "headline": "Berita Indonesia Terkini",
-  "image": ["https://kilas.com/assets/kilas-banner.png"],
+  "image": ["/kilas-banner.png"],
   "author": {
     "@type": "Organization",
     "name": "Kilas.com"
@@ -65,7 +65,7 @@ if ($data && isset($data['status']) && $data['status'] == 200) {
     "name": "Kilas.com",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://kilas.com/assets/kilas-icon.png"
+      "url": "/kilas-icon.png"
     }
   },
   "datePublished": "2025-09-05"
@@ -113,7 +113,7 @@ if ($data && isset($data['status']) && $data['status'] == 200) {
     <header class="bg-white shadow-sm sticky top-0 z-10">
         <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
             <div class="flex items-center mb-4 md:mb-0">
-                <img src="/assets/kilas-black.png" height="30px">
+                <img src="/kilas-black.png" height="30px">
             </div>
             
             <div class="relative w-full md:w-1/3">
@@ -176,7 +176,7 @@ if ($data && isset($data['status']) && $data['status'] == 200) {
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-4 md:mb-0">
                     <div class="flex items-center">
-                        <img src="/assets/kilas-white.png" height="30px">
+                        <img src="/kilas-white.png" height="30px">
                     </div>
                     <p class="text-gray-400 mt-2">Berita terkini, update setiap hari</p>
                 </div>
