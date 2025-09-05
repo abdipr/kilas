@@ -113,7 +113,7 @@ if ($data && isset($data['status']) && $data['status'] == 200) {
     <header class="bg-white shadow-sm sticky top-0 z-10">
         <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
             <div class="flex items-center mb-4 md:mb-0">
-                <img src="/kilas-black.png" height="30px">
+                <img src="/kilas-black.png" alt="Kilas Logo" height="30">
             </div>
             
             <div class="relative w-full md:w-1/3">
@@ -176,7 +176,7 @@ if ($data && isset($data['status']) && $data['status'] == 200) {
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-4 md:mb-0">
                     <div class="flex items-center">
-                        <img src="/kilas-white.png" height="30px">
+                        <img src="/kilas-white.png" alt="Kilas Logo" height="30">
                     </div>
                     <p class="text-gray-400 mt-2">Berita terkini, update setiap hari</p>
                 </div>
