@@ -50,6 +50,7 @@ if ($data && isset($data['status']) && $data['status'] == 200) {
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -80,6 +81,10 @@ if ($data && isset($data['status']) && $data['status'] == 200) {
             --dark: #172030;
             --light: #f8fafc;
         }
+        * {
+            font-family: 'Figtree', sans-serif;
+        }
+
         
         .loading-spinner {
             width: 50px;
@@ -133,7 +138,7 @@ if ($data && isset($data['status']) && $data['status'] == 200) {
                     <i data-feather="search" class="text-gray-400"></i>
                 </div>
                 <input type="text" id="searchInput" placeholder="Cari artikel..." 
-                    class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all">
             </div>
         </div>
     </header>
@@ -190,7 +195,7 @@ if ($data && isset($data['status']) && $data['status'] == 200) {
                     <div class="flex items-center">
                         <img src="/kilas-white.png" alt="Kilas Logo" class="logo">
                     </div>
-                    <p class="text-gray-400 mt-2">Berita terkini, update setiap hari</p>
+                    <p class="text-gray-400 mt-2">Berita Indonesia terkini, update setiap hari dari berbagai sumber terpercaya.</p>
                 </div>
                 <div class="flex space-x-4">
                     <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
@@ -205,7 +210,7 @@ if ($data && isset($data['status']) && $data['status'] == 200) {
                 </div>
             </div>
             <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400 text-sm">
-                <p>&copy; <?= date('Y') ?> Kilas.com. All rights reserved.</p>
+                <p>&copy; 2004-<?= date('Y') ?> Kilas.com. All rights reserved.</p>
             </div>
         </div>
     </footer>
