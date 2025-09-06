@@ -4,15 +4,17 @@ require "/var/task/user/api/simple_html_dom.php";
 
 $pantry_url = "https://getpantry.cloud/apiv1/pantry/fb80de92-bc75-495c-9f7c-52a273ca9061/basket/news-detik";
 
-// Batas waktu cache (5 menit)
-$cache_time = 300;
+// Batas waktu cache (2.5 menit)
+$cache_time = 150;
 
-function fetch_from_pantry($url) {
+function fetch_from_pantry($url)
+{
     $response = file_get_contents($url);
     return json_decode($response, true);
 }
 
-function save_to_pantry($url, $data) {
+function save_to_pantry($url, $data)
+{
     $options = [
         "http" => [
             "header" => "Content-Type: application/json\r\n",
@@ -36,12 +38,18 @@ if ($data && (time() - strtotime($data["timestamp"])) < $cache_time) {
         $result = [];
         // Loop ambil 10 berita
         for ($i = 0; $i < 20; $i++) {
+            $date = $e->find("span")[($i * 2) + 1]->title;
+            $date_ago = $e->find("span")[($i * 2) + 1]->plaintext;
+
+            if ($date === $date_ago) {
+                $date_ago = "1 detik yang lalu";
+            }
             $result[] = [
-                "title"    => $e->find("h3[class='media__title']")[$i]->find("a")[0]->plaintext,
-                "date"     => $e->find("span")[($i * 2) + 1]->title,
-                "date_ago" => $e->find("span")[($i * 2) + 1]->plaintext,
-                "image"    => $e->find("div[class='media__image']")[$i]->find("img")[0]->src,
-                "link"     => $e->find("h3[class='media__title']")[$i]->find("a")[0]->href,
+                "title" => $e->find("h3[class='media__title']")[$i]->find("a")[0]->plaintext,
+                "date" => $date,
+                "date_ago" => $date_ago,
+                "image" => $e->find("div[class='media__image']")[$i]->find("img")[0]->src,
+                "link" => $e->find("h3[class='media__title']")[$i]->find("a")[0]->href,
             ];
         }
         $ret[] = $result;
