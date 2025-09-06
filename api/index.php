@@ -86,6 +86,7 @@ if ($data && isset($data['status']) && $data['status'] == 200) {
         }
         * {
             font-family: 'Figtree', sans-serif;
+            transition: all 0.3s ease;
         }
 
         
